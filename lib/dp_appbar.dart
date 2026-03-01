@@ -26,7 +26,7 @@ class DpAppbar extends StatelessWidget implements PreferredSizeWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Theme.of(context).primaryColor, // this is used to set the background color of the app bar to the primary color of the theme
       foregroundColor: Colors.white,
       centerTitle: true,
       actions: actions,

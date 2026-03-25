@@ -1,6 +1,7 @@
 // how to validate form
 import 'package:daily_practice/dp_appbar.dart';
 import 'package:daily_practice/home_page.dart';
+import 'package:daily_practice/theme_test.dart';
 import 'package:flutter/material.dart';
 
 class FormValidation extends StatelessWidget {
@@ -8,6 +9,9 @@ class FormValidation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController emailController = TextEditingController();
+    TextEditingController phoneController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
     final _formKey = GlobalKey<FormState>(); //generating key for form validation
     return Scaffold(
       appBar: const DpAppbar(title: "Login"),
@@ -60,6 +64,7 @@ class FormValidation extends StatelessWidget {
                           }
                           return null;
                         },
+                        controller: emailController,
                       ),
           
                       SizedBox(height: 10),
@@ -92,6 +97,7 @@ class FormValidation extends StatelessWidget {
                           }
                           return null;
                         },
+                        controller: phoneController,
                       ),
           
                       SizedBox(height: 10),
@@ -124,6 +130,7 @@ class FormValidation extends StatelessWidget {
                           }
                           return null;
                         },
+                        controller: passwordController,
                       ),
           
                       SizedBox(height: 10),
@@ -142,6 +149,70 @@ class FormValidation extends StatelessWidget {
                           },
                           child: Text(
                             'Enter',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white,
+                            elevation: 2,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 10),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {
+                              // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage())); //navigates to the next page and the page shows a back button.
+                              // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ThemeTest())); // navigates to the next page and the page do not shows any back button because of Navigator.pushReplacement
+                              // Navigator.pushNamed(context, '/theme'); // this is used to navigate to the next page using named route. it is a string that contains the name of the route. it is passed as a parameter to the Navigator.pushNamed method.
+                              Navigator.pushReplacementNamed(context, '/theme'); // this is used to navigate to the next page using named route and the page do not shows any back button because of Navigator.pushReplacementNamed. it is a string that contains the name of the route. it is passed as a parameter to the Navigator.pushReplacementNamed method.
+                          },
+                          child: Text(
+                            'Theme Test',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            foregroundColor: Colors.white,
+                            elevation: 2,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                       SizedBox(height: 10),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {
+                              // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage())); //navigates to the next page and the page shows a back button.
+                              // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ThemeTest())); // navigates to the next page and the page do not shows any back button because of Navigator.pushReplacement
+                              Navigator.pushNamed(context, '/dashboard', arguments: {
+                                'email': emailController.text,
+                                'phone': phoneController.text,
+                                'password': passwordController.text,
+                                'name': 'Shakib Khan',
+                              }
+                            ); // this is used to navigate to the next page using named route. it is a string that contains the name of the route. it is passed as a parameter to the Navigator.pushNamed method.
+                              // Navigator.pushReplacementNamed(context, '/dashboard'); // this is used to navigate to the next page using named route and the page do not shows any back button because of Navigator.pushReplacementNamed. it is a string that contains the name of the route. it is passed as a parameter to the Navigator.pushReplacementNamed method.
+                          },
+                          child: Text(
+                            'Dashboard',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,

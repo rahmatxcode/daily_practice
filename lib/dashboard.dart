@@ -9,7 +9,7 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context)?.settings.arguments as Map;
+    final args = ModalRoute.of(context)?.settings.arguments as Map; //
     return Scaffold(
       appBar: const DpAppbar(title: "Dashboard"),
       body: Center(
@@ -18,6 +18,18 @@ class Dashboard extends StatelessWidget {
           children: [
             Text(
               args['email'].toString(), // this is used to get the arguments passed from the previous page. it is passed as a parameter to the Text widget.
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+
+            SizedBox(height: 10,),
+            Text(
+              args['phone'].toString(), // this is used to get the arguments passed from the previous page. it is passed as a parameter to the Text widget.
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+
+            SizedBox(height: 10,),
+            Text(
+              args['name'].toString(), // this is used to get the arguments passed from the previous page. it is passed as a parameter to the Text widget.
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ],

@@ -4,7 +4,9 @@ import 'package:daily_practice/dashboard.dart';
 import 'package:daily_practice/form_validation.dart';
 //import 'package:daily_practice/gridv.dart';
 import 'package:daily_practice/home_page.dart';
+import 'package:daily_practice/own_widget.dart';
 import 'package:daily_practice/stackW.dart';
+import 'package:daily_practice/stackWAdv.dart';
 import 'package:daily_practice/theme_test.dart';
 import 'package:daily_practice/themes/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -85,7 +87,7 @@ class MyApp extends StatelessWidget {
       // ),// this is used to set the dark theme of the app. ThemeData.dark() is a predefined dark theme that contains all the properties of the dark theme. it is used to set the colors, fonts, and other properties of the dark theme. it is passed as a parameter to the MaterialApp constructor.
       themeMode: ThemeMode.light, // this is used to set the theme mode of the app. ThemeMode is an enum that contains three values: light, dark, and system. it is used to set the theme mode of the app. it is passed as a parameter to the MaterialApp constructor.
       //home: ThemeTest(),
-      initialRoute: '/stackw', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
+      initialRoute: '/ownwidget', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
       routes: { // this is used to set the routes of the app. it is a map that contains the route name as the key and the widget as the value. it is passed as a parameter to the MaterialApp constructor.
         // '/form': (context) => FormPage(),
         '/validation': (context) => FormValidation(),
@@ -95,6 +97,8 @@ class MyApp extends StatelessWidget {
         '/dashboard': (context) => Dashboard(),
         '/list': (context) => Flist(),
         '/stackw': (context) => StackW(),
+        '/stackwadv': (context) => Stackwadv(),
+        '/ownwidget': (context) => OwnWidget(),
       }
     );
   }

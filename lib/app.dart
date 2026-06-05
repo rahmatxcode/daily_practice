@@ -5,12 +5,14 @@ import 'package:daily_practice/form_validation.dart';
 //import 'package:daily_practice/gridv.dart';
 import 'package:daily_practice/home_page.dart';
 import 'package:daily_practice/own_widget.dart';
+import 'package:daily_practice/responsive_layout.dart';
 import 'package:daily_practice/responsiveness.dart';
 import 'package:daily_practice/responsiveness_package.dart';
 import 'package:daily_practice/stackW.dart';
 import 'package:daily_practice/stackWAdv.dart';
 import 'package:daily_practice/theme_test.dart';
 import 'package:daily_practice/themes/app_theme.dart';
+import 'package:daily_practice/todo_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -100,7 +102,7 @@ class MyApp extends StatelessWidget {
               .light, // this is used to set the theme mode of the app. ThemeMode is an enum that contains three values: light, dark, and system. it is used to set the theme mode of the app. it is passed as a parameter to the MaterialApp constructor.
           //home: ThemeTest(),
           initialRoute:
-              '/responsivenesspackage', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
+              '/todo', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
           routes: {
             // this is used to set the routes of the app. it is a map that contains the route name as the key and the widget as the value. it is passed as a parameter to the MaterialApp constructor.
             // '/form': (context) => FormPage(),
@@ -115,6 +117,8 @@ class MyApp extends StatelessWidget {
             '/ownwidget': (context) => OwnWidget(),
             '/responsiveness': (context) => Responsiveness(),
             '/responsivenesspackage': (context) => ResponsivenessPackage(),
+            '/responsivelayout': (context) => ResponsiveLayout(),
+            '/todo': (context) => TodoList(),
           },
         );
       },

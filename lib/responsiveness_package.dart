@@ -145,6 +145,7 @@ class ResponsivenessPackage extends StatelessWidget {
               ),
 
               SizedBox(height: 20.h), // this is used to add some space between the container and the button. it is a double that contains the height of the space. it is passed as a parameter to the SizedBox constructor.
+              
               //without using flutter_screenutil package, the container will not be responsive and it will not adjust its size according to the screen size. it will have a fixed size of 200x200 pixels regardless of the screen size. it will look good on a small screen but it will look small on a large screen.
               Container(
                 height: 200,

@@ -50,6 +50,29 @@ class _StateClass2State extends State<StateClass2> {
                   ],
                 ),
               ),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        num = 0;
+                      });
+                    },
+                    child: Text('Reset', style: TextStyle(fontSize: 30)),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red, // this is used to change the background color of the button
+                      foregroundColor: Colors.white, // this is used to change the text color of the button
+                      shape: RoundedRectangleBorder( // this is used to change the shape of the button
+                        borderRadius: BorderRadius.circular(8), // this is used to make the button circular
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

@@ -10,8 +10,10 @@ import 'package:daily_practice/responsiveness.dart';
 import 'package:daily_practice/responsiveness_package.dart';
 import 'package:daily_practice/stackW.dart';
 import 'package:daily_practice/stackWAdv.dart';
+import 'package:daily_practice/state_concepts/example.dart';
 import 'package:daily_practice/state_concepts/state_class1.dart';
 import 'package:daily_practice/state_concepts/state_class2.dart';
+import 'package:daily_practice/state_concepts/stateful_life.dart';
 import 'package:daily_practice/theme_test.dart';
 import 'package:daily_practice/themes/app_theme.dart';
 import 'package:daily_practice/todo_list.dart';
@@ -104,7 +106,7 @@ class MyApp extends StatelessWidget {
               .light, // this is used to set the theme mode of the app. ThemeMode is an enum that contains three values: light, dark, and system. it is used to set the theme mode of the app. it is passed as a parameter to the MaterialApp constructor.
           //home: ThemeTest(),
           initialRoute:
-              'stateclass2', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
+              'statefullife', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
           routes: {
             // this is used to set the routes of the app. it is a map that contains the route name as the key and the widget as the value. it is passed as a parameter to the MaterialApp constructor.
             // '/form': (context) => FormPage(),
@@ -123,6 +125,8 @@ class MyApp extends StatelessWidget {
             '/todo': (context) => TodoList(),
             'stateclass1': (context) => StateClass1(),
             'stateclass2': (context) => StateClass2(),
+            'statefullife': (context) => StatefulLife(),
+            'example': (context) => Example(),
           },
         );
       },

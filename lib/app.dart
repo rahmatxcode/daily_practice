@@ -1,5 +1,6 @@
 //import 'package:daily_practice/form_page.dart';
 import 'package:daily_practice/FList.dart';
+import 'package:daily_practice/RestAPI_Concepts/api_call.dart';
 import 'package:daily_practice/dashboard.dart';
 import 'package:daily_practice/form_validation.dart';
 //import 'package:daily_practice/gridv.dart';
@@ -107,7 +108,7 @@ class MyApp extends StatelessWidget {
               .light, // this is used to set the theme mode of the app. ThemeMode is an enum that contains three values: light, dark, and system. it is used to set the theme mode of the app. it is passed as a parameter to the MaterialApp constructor.
           //home: ThemeTest(),
           initialRoute:
-              'calculator', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
+              'apicall', // this is used to set the initial route of the app. it is a string that contains the name of the route. it is passed as a parameter to the MaterialApp constructor.
           routes: {
             // this is used to set the routes of the app. it is a map that contains the route name as the key and the widget as the value. it is passed as a parameter to the MaterialApp constructor.
             // '/form': (context) => FormPage(),
@@ -129,6 +130,7 @@ class MyApp extends StatelessWidget {
             'statefullife': (context) => StatefulLife(),
             'example': (context) => Example(),
             'calculator': (context) => Calculator(),
+            'apicall': (context) => APICall(),
           },
         );
       },
